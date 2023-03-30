@@ -1,0 +1,14 @@
+version: "3"
+services:
+  oracle11g:
+    image: jaspeen/oracle-xe-11g
+    container_name: oracle11g
+    ports:
+      - "1521:1521"
+      - "8080:8080"
+
+  spring-docker:
+    image: jsohee98/spring-docker
+    build: .
+    ports:
+      - "8081:8081"
